@@ -6,13 +6,11 @@ use App\HttpRequest as HttpRequest;
 
 class CountryService extends OutputHandler
 {
-	protected $input = [];
-
-	protected $url = ['https://restcountries.eu/rest/v2/name/','https://restcountries.eu/rest/v2/lang/'];
-
+    protected $input = [];
+    protected $url = ['https://restcountries.eu/rest/v2/name/','https://restcountries.eu/rest/v2/lang/'];
     protected $client;
-
-	public function __construct(array $input, HttpRequest $client) 
+	
+    public function __construct(array $input, HttpRequest $client) 
     {
         $this->input = $input;
         $this->client = $client;
